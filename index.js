@@ -14,6 +14,9 @@ const shops = [
   { id: "4", name: "Babu Restaurant", type: "shop" },
   { id: "5", name: "Maa Tara Hardware", type: "shop" },
   { id: "6", name: "Dev Kumar Saloon", type: "saloon" },
+  { id: "7", name: "Sritama Beauty parlour", type: "parlour" },
+  { id: "8", name: "Jhantu Misti Dokan", type: "Sweet" },
+  { id: "9", name: "Babujee Restuarant", type: "shop" },
 ];
 
 // Dummy products

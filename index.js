@@ -13,6 +13,7 @@ const shops = [
   { id: "3", name: "Sukesh Saloon", type: "saloon" },
   { id: "4", name: "Babu Restaurant", type: "shop" },
   { id: "5", name: "Maa Tara Hardware", type: "shop" },
+  { id: "6", name: "Dev Kumar Saloon", type: "saloon" },
 ];
 
 // Dummy products

@@ -137,7 +137,7 @@ const shops = [
   },
   {
     id: "12",
-    name: "Babujee Restaurant",
+    name: "Babujee ",
     type: "shop",
     items: [
       { id: "f7", name: "Fish Curry", price: 200 },

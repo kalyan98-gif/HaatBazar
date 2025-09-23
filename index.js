@@ -94,7 +94,7 @@ const shops = [
   },
   {
     id: "8",
-    name: "Pankaj Electronic",
+    name: "Light House",
     type: "shop",
     items: [
       { id: "e1", name: "Ceiling Fan", price: 1800 },

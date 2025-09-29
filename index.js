@@ -145,6 +145,19 @@ const shops = [
       { id: "f9", name: "Veg Thali", price: 120 },
     ],
   },
+{
+    id: "13",
+    name: "Sarkar Telecom",
+    type: "shop",
+    items: [
+      { id: "p1", name: "Motorola g85", price: 30,000 },
+      { id: "p2", name: "Vivo v25 plus", price: 44,500 },
+      { id: "p3", name: "Sumsang S25", price: 1,50,00 },
+      { id: "p4", name: "Nokia music express", price: 2,800 },
+      { id: "p5", name: "Oppo reno 7 plus", price: 85,000 },
+      { id: "p6", name: "Nothing Phone3", price: 45,000 },
+    ],
+  },
 ];
 
 // ✅ API routes

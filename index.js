@@ -147,7 +147,7 @@ const shops = [
   },
 {
     id: "13",
-    name: "Sarkar Telecom",
+    name: "Sarkar Telecom ",
     type: "shop",
     items: [
       { id: "p1", name: "Motorola g85", price: 30,000 },

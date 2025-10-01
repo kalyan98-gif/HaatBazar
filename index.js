@@ -127,7 +127,7 @@ const shops = [
   },
   {
     id: "11",
-    name: "Jhantu Misti Dokan",
+    name: "Mratri Sweet",
     type: "sweet",
     items: [
       { id: "m1", name: "Rasgulla (1kg)", price: 200 },

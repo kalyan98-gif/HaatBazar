@@ -16,6 +16,15 @@ app.use(express.json());
 app.use(cors());
 
 // ✅ All Shops with their items
+// index.js
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+// ✅ All Shops with their items
 const shops = [
   {
     id: "1",
@@ -28,185 +37,264 @@ const shops = [
     name: "Usha Store",
     type: "shop",
     items: [
-      { id: "p1", name: "Basmati Rice 1kg", price: 90 },
-      { id: "p2", name: "Moong Dal 1kg", price: 120 },
-      { id: "p3", name: "Mustard Oil 1L", price: 150 },
-      { id: "p4", name: "Sugar 1kg", price: 50 },
-      { id: "p5", name: "Tata Salt 1kg", price: 28 },
-      { id: "p6", name: "Marie Gold Biscuit", price: 10 },
-    ],
-  },
-  {
-    id: "3",
-    name: "Sukesh Saloon",
-    type: "saloon",
-    items: [
-      { id: "s1", name: "Hair Cut", price: 80 },
-      { id: "s2", name: "Shaving", price: 50 },
-      { id: "s3", name: "Hair Colour", price: 250 },
-      { id: "s4", name: "Facial (Gold)", price: 400 },
-      { id: "s5", name: "Head Massage", price: 150 },
-      { id: "s6", name: "Beard Trim", price: 70 },
-    ],
-  },
-  {
-    id: "4",
-    name: "Babu Restaurant",
-    type: "shop",
-    items: [
-      { id: "f1", name: "Chicken Biryani", price: 180 },
-      { id: "f2", name: "Paneer Butter Masala", price: 160 },
-      { id: "f3", name: "Tandoori Roti", price: 15 },
-      { id: "f4", name: "Chicken Kasha", price: 220 },
-      { id: "f5", name: "Mixed Fried Rice", price: 150 },
-      { id: "f6", name: "Green Salad", price: 50 },
-    ],
-  },
-  {
-    id: "5",
-    name: "Maa Tara Hardware",
-    type: "shop",
-    items: [
-      { id: "h1", name: "Cement Bag (ACC)", price: 450 },
-      { id: "h2", name: "TMT Rod (per kg)", price: 80 },
-      { id: "h3", name: "Paint (1 Litre)", price: 300 },
-      { id: "h4", name: "Hammer", price: 150 },
-      { id: "h5", name: "Bricks (per piece)", price: 12 },
-      { id: "h6", name: "Screwdriver Set", price: 200 },
-    ],
-  },
-  {
-    id: "6",
-    name: "New Rekha Dress",
-    type: "shop",
-    items: [
-      { id: "d1", name: "Cotton Saree", price: 800 },
-      { id: "d2", name: "Men's T-Shirt", price: 450 },
-      { id: "d3", name: "Jeans Pant", price: 1200 },
-      { id: "d4", name: "Designer Kurti", price: 700 },
-      { id: "d5", name: "Formal Shirt", price: 900 },
-      { id: "d6", name: "Ladies Dupatta", price: 250 },
-    ],
-  },
-  {
-    id: "7",
-    name: "Mamoni Shoe House",
-    type: "shop",
-    items: [
-      { id: "sh1", name: "Formal Shoes (Men)", price: 1500 },
-      { id: "sh2", name: "Sneakers", price: 1800 },
-      { id: "sh3", name: "Sandals (Women)", price: 600 },
-      { id: "sh4", name: "Leather Slippers", price: 400 },
-      { id: "sh5", name: "Sports Shoes", price: 2500 },
-      { id: "sh6", name: "Kids School Shoes", price: 750 },
-    ],
-  },
-  {
-    id: "8",
-    name: "Light House",
-    type: "shop",
-    items: [
-      { id: "e1", name: "Ceiling Fan", price: 1800 },
-      { id: "e2", name: "LED Bulb (9W)", price: 120 },
-      { id: "e3", name: "Iron", price: 900 },
-      { id: "e4", name: "Extension Board", price: 350 },
-      { id: "e5", name: "Table Fan", price: 1300 },
-      { id: "e6", name: "Mixer Grinder", price: 2200 },
-    ],
-  },
-  {
-    id: "9",
-    name: "Dev Kumar Saloon",
-    type: "saloon",
-    items: [
-      { id: "s1", name: "Hair Cut", price: 100 },
-      { id: "s2", name: "Shaving", price: 60 },
-      { id: "s3", name: "Facial", price: 300 },
-    ],
-  },
-  {
-    id: "10",
-    name: "Sritama Beauty Parlour",
-    type: "parlour",
-    items: [
-      { id: "sp1", name: "Makeup", price: 1500 },
-      { id: "sp2", name: "Bridal Package", price: 5000 },
-      { id: "sp3", name: "Hair Styling", price: 700 },
-    ],
-  },
-  {
-    id: "11",
-    name: "Mratree Sweet",
-    type: "sweet",
-    items: [
-      { id: "m1", name: "Rasgulla (1kg)", price: 200 },
-      { id: "m2", name: "Sandesh (1kg)", price: 250 },
-      { id: "m3", name: "Gulab Jamun (1kg)", price: 300 },
-    ],
-  },
-  {
-    id: "12",
-    name: "Babujee Restuarant",
-    type: "shop",
-    items: [
-      { id: "f7", name: "Fish Curry", price: 200 },
-      { id: "f8", name: "Mutton Curry", price: 350 },
-      { id: "f9", name: "Veg Thali", price: 120 },
-    ],
-  },
-  {
-    id: "13",
-    name: "Sarkar Telecom",
-    type: "shop",
-    items: [
-      { id: "p1", name: "Motorola g85", price: 30000 },
-      { id: "p2", name: "Vivo v25 plus", price: 44500 },
-      { id: "p3", name: "Samsung S25", price: 15000 },
-      { id: "p4", name: "Nokia music express", price: 2800 },
-      { id: "p5", name: "Oppo reno 7 plus", price: 85000 },
-      { id: "p6", name: "Nothing Phone3", price: 45000 },
+      { id: "p1", name: "Basmati Rice 1kg", price: 90, desc: "উচ্চ মানের সুগন্ধি চাল, দৈনন্দিন রান্নার জন্য উপযুক্ত।" },
+      { id: "p2", name: "Moong Dal 1kg", price: 120, desc: "প্রোটিনসমৃদ্ধ মুগ ডাল, খিচুড়ি বা তরকারির জন্য আদর্শ।" },
+      { id: "p3", name: "Mustard Oil 1L", price: 150, desc: "বিশুদ্ধ সরিষার তেল, রান্না ও মালিশ দুইয়ের জন্যই ভালো।" },
+      { id: "p4", name: "Sugar 1kg", price: 50, desc: "সাদা দানাদার চিনি, চা বা মিষ্টান্নে ব্যবহারের উপযোগী।" },
+      { id: "p5", name: "Tata Salt 1kg", price: 28, desc: "আয়োডিনযুক্ত লবণ, স্বাস্থ্যকর খাদ্যের জন্য প্রয়োজনীয়।" },
+      { id: "p6", name: "Marie Gold Biscuit", price: 10, desc: "হালকা ও স্বাস্থ্যকর বিস্কুট, চায়ের সঙ্গে উপভোগ্য।" },
     ],
   },
 
-  // ===== New Shops =====
+  // ✅ নতুন ২৫টি গ্রামীণ দোকান
   {
-    id: "14",
-    name: "Haldar Enterprise",
+    id: "18",
+    name: "Kamal Fish Stall",
     type: "shop",
     items: [
-      { id: "he1", name: "Notebook", price: 50 },
-      { id: "he2", name: "Pen Pack", price: 30 },
-      { id: "he3", name: "Stapler", price: 150 },
+      { id: "kf1", name: "Rohu Fish (1kg)", price: 280, desc: "তাজা নদীর রুই মাছ, রান্নায় স্বাদে ভরপুর।" },
+      { id: "kf2", name: "Katla Fish (1kg)", price: 300, desc: "বড় সাইজের কাতলা মাছ, পুষ্টিকর ও সুস্বাদু।" },
+      { id: "kf3", name: "Small Prawn (500g)", price: 250, desc: "গ্রামীণ পুকুরের ছোট চিংড়ি, ভাজা বা তরকারির জন্য।" },
     ],
   },
   {
-    id: "15",
-    name: "Gayan Store",
+    id: "19",
+    name: "Rina Tailors",
     type: "shop",
     items: [
-      { id: "gs1", name: "Tea Pack", price: 200 },
-      { id: "gs2", name: "Coffee Beans", price: 400 },
-      { id: "gs3", name: "Sugar 1kg", price: 60 },
+      { id: "rt1", name: "Blouse Stitching", price: 200, desc: "মেয়েদের ব্লাউজ নিখুঁতভাবে তৈরি করা হয়।" },
+      { id: "rt2", name: "Petticoat Stitching", price: 150, desc: "পেটিকোট কাস্টম মাপে তৈরি।" },
+      { id: "rt3", name: "Kurta Alteration", price: 100, desc: "পুরুষদের কুর্তা কাটিং ও ঠিক করা হয়।" },
     ],
   },
   {
-    id: "16",
-    name: "Dee Store",
+    id: "20",
+    name: "Gopal Stationery",
     type: "shop",
     items: [
-      { id: "ds1", name: "Shampoo", price: 150 },
-      { id: "ds2", name: "Soap", price: 40 },
-      { id: "ds3", name: "Conditioner", price: 200 },
+      { id: "gs1", name: "Notebook", price: 40, desc: "স্কুল-কলেজের জন্য ভালো মানের নোটবুক।" },
+      { id: "gs2", name: "Blue Pen (Pack of 5)", price: 30, desc: "স্মুথ লিখনের পেন সেট।" },
+      { id: "gs3", name: "Glue Bottle", price: 25, desc: "শিশুদের হস্তশিল্পের জন্য নিরাপদ গ্লু।" },
     ],
   },
   {
-    id: "17",
-    name: "Saha Hotel",
+    id: "21",
+    name: "Hari Cycle Repair",
     type: "shop",
     items: [
-      { id: "sh1", name: "Chicken Curry", price: 250 },
-      { id: "sh2", name: "Mutton Curry", price: 400 },
-      { id: "sh3", name: "Veg Thali", price: 120 },
+      { id: "hc1", name: "Tube Change", price: 60, desc: "সাইকেলের টিউব পরিবর্তন ও বাতাস দেওয়া হয়।" },
+      { id: "hc2", name: "Brake Cable", price: 40, desc: "সাইকেলের ব্রেকের তার ও সার্ভিসিং।" },
+      { id: "hc3", name: "Full Service", price: 150, desc: "সম্পূর্ণ সাইকেল চেকআপ ও মেরামত।" },
+    ],
+  },
+  {
+    id: "22",
+    name: "Kali Mandir Flowers",
+    type: "shop",
+    items: [
+      { id: "km1", name: "Lotus Flower", price: 20, desc: "পুজোর জন্য সতেজ পদ্মফুল।" },
+      { id: "km2", name: "Garland", price: 50, desc: "তাজা গাঁদা ফুলের মালা।" },
+      { id: "km3", name: "Incense Sticks (Packet)", price: 15, desc: "সুগন্ধি ধূপ, দৈনিক পূজার জন্য।" },
+    ],
+  },
+  {
+    id: "23",
+    name: "Raju Tea Stall",
+    type: "shop",
+    items: [
+      { id: "rt1", name: "Milk Tea", price: 10, desc: "তাজা দুধ ও আদা দিয়ে তৈরি চা।" },
+      { id: "rt2", name: "Lemon Tea", price: 8, desc: "লেবুর হালকা চা, রিফ্রেশিং।" },
+      { id: "rt3", name: "Samosa", price: 10, desc: "গরম গরম আলুর সামোসা, চায়ের সঙ্গে আদর্শ।" },
+    ],
+  },
+  {
+    id: "24",
+    name: "Bapi Mobile Center",
+    type: "shop",
+    items: [
+      { id: "bm1", name: "Mobile Cover", price: 120, desc: "সব মডেলের জন্য স্টাইলিশ কভার।" },
+      { id: "bm2", name: "Screen Guard", price: 50, desc: "স্মার্টফোন স্ক্রিন সুরক্ষা।" },
+      { id: "bm3", name: "Charger Cable", price: 180, desc: "উচ্চমানের ডেটা কেবল।" },
+    ],
+  },
+  {
+    id: "25",
+    name: "Nimai Shoe Repair",
+    type: "shop",
+    items: [
+      { id: "ns1", name: "Shoe Sole Replace", price: 100, desc: "জুতোয় নতুন সোল লাগানো হয়।" },
+      { id: "ns2", name: "Polish & Clean", price: 30, desc: "পুরোনো জুতো চকচকে করা হয়।" },
+      { id: "ns3", name: "Stitch Repair", price: 50, desc: "ছেঁড়া অংশ সেলাই করে ঠিক করা হয়।" },
+    ],
+  },
+  {
+    id: "26",
+    name: "Sona Jewelry Shop",
+    type: "shop",
+    items: [
+      { id: "sj1", name: "Silver Ring", price: 250, desc: "খাঁটি রুপার আংটি।" },
+      { id: "sj2", name: "Gold Plated Chain", price: 800, desc: "গোল্ড-প্লেটেড হালকা চেইন।" },
+      { id: "sj3", name: "Nose Pin", price: 100, desc: "সুন্দর ডিজাইনের নাকফুল।" },
+    ],
+  },
+  {
+    id: "27",
+    name: "Pintu Electrical",
+    type: "shop",
+    items: [
+      { id: "pe1", name: "Switch Board", price: 150, desc: "বাড়ির জন্য মজবুত সুইচ বোর্ড।" },
+      { id: "pe2", name: "Wire (10m)", price: 100, desc: "উচ্চমানের ইলেকট্রিক তার।" },
+      { id: "pe3", name: "Bulb 12W", price: 130, desc: "এনার্জি সেভিং LED বাল্ব।" },
+    ],
+  },
+  {
+    id: "28",
+    name: "Laxmi Sweet Shop",
+    type: "sweet",
+    items: [
+      { id: "ls1", name: "Jalebi (1kg)", price: 220, desc: "গরম গরম ক্রিসপি জিলিপি।" },
+      { id: "ls2", name: "Rasgulla (1kg)", price: 200, desc: "নরম স্পঞ্জি রসগোল্লা।" },
+      { id: "ls3", name: "Chamcham (1kg)", price: 240, desc: "মিষ্টি দুধে তৈরি চমচম।" },
+    ],
+  },
+  {
+    id: "29",
+    name: "Tapan Poultry",
+    type: "shop",
+    items: [
+      { id: "tp1", name: "Desi Chicken (1kg)", price: 320, desc: "গ্রামের দেশি মুরগি, সুস্বাদু ও স্বাস্থ্যকর।" },
+      { id: "tp2", name: "Duck Egg (per piece)", price: 15, desc: "তাজা হাঁসের ডিম।" },
+      { id: "tp3", name: "Broiler Chicken (1kg)", price: 180, desc: "তাজা ব্রয়লার মুরগি।" },
+    ],
+  },
+  {
+    id: "30",
+    name: "Manoj Vegetables",
+    type: "shop",
+    items: [
+      { id: "mv1", name: "Potato (1kg)", price: 25, desc: "তাজা আলু, প্রতিদিনের রান্নার জন্য।" },
+      { id: "mv2", name: "Onion (1kg)", price: 40, desc: "রান্নার অপরিহার্য উপাদান।" },
+      { id: "mv3", name: "Tomato (1kg)", price: 50, desc: "রসালো টমেটো, সালাদ বা রান্নায়।" },
+    ],
+  },
+  {
+    id: "31",
+    name: "Raju Barber Shop",
+    type: "saloon",
+    items: [
+      { id: "rb1", name: "Hair Cut", price: 60, desc: "চুল কাটা দক্ষ হাতের কাজে।" },
+      { id: "rb2", name: "Shaving", price: 40, desc: "পরিষ্কার শেভিং সার্ভিস।" },
+      { id: "rb3", name: "Hair Wash", price: 30, desc: "শ্যাম্পু ও চুল পরিষ্কার।" },
+    ],
+  },
+  {
+    id: "32",
+    name: "Bina Beauty Parlour",
+    type: "parlour",
+    items: [
+      { id: "bp1", name: "Facial", price: 350, desc: "ত্বকের উজ্জ্বলতা বৃদ্ধিতে সাহায্য করে।" },
+      { id: "bp2", name: "Hair Spa", price: 400, desc: "চুল মসৃণ ও ঝলমলে করে।" },
+      { id: "bp3", name: "Eyebrow Threading", price: 50, desc: "পরিষ্কার ও নিখুঁত আইব্রো কাট।" },
+    ],
+  },
+  {
+    id: "33",
+    name: "Sitaram Dairy",
+    type: "shop",
+    items: [
+      { id: "sd1", name: "Cow Milk (1L)", price: 60, desc: "তাজা গরুর দুধ।" },
+      { id: "sd2", name: "Curd (500g)", price: 40, desc: "ঘন দই, খাওয়ার বা রান্নার জন্য।" },
+      { id: "sd3", name: "Paneer (250g)", price: 80, desc: "তাজা ছানার পনির।" },
+    ],
+  },
+  {
+    id: "34",
+    name: "Goutam Furniture",
+    type: "shop",
+    items: [
+      { id: "gf1", name: "Wooden Chair", price: 800, desc: "টিকাউ কাঠের চেয়ার।" },
+      { id: "gf2", name: "Study Table", price: 1500, desc: "ছাত্রছাত্রীদের জন্য উপযুক্ত টেবিল।" },
+      { id: "gf3", name: "Cot (Single)", price: 2500, desc: "মজবুত কাঠের খাট।" },
+    ],
+  },
+  {
+    id: "35",
+    name: "Ananda Bakery",
+    type: "shop",
+    items: [
+      { id: "ab1", name: "Bread (400g)", price: 40, desc: "তাজা বেকারি পাউরুটি।" },
+      { id: "ab2", name: "Cake (250g)", price: 120, desc: "হালকা মিষ্টি কেক।" },
+      { id: "ab3", name: "Cream Roll", price: 30, desc: "বাচ্চাদের প্রিয় মিষ্টি রোল।" },
+    ],
+  },
+  {
+    id: "36",
+    name: "Hari Shoe Store",
+    type: "shop",
+    items: [
+      { id: "hs1", name: "Rubber Slipper", price: 150, desc: "আরামদায়ক রাবারের স্যান্ডেল।" },
+      { id: "hs2", name: "Kids Shoes", price: 450, desc: "শিশুদের স্কুল জুতো।" },
+      { id: "hs3", name: "Ladies Sandal", price: 600, desc: "স্টাইলিশ ও টেকসই স্যান্ডেল।" },
+    ],
+  },
+  {
+    id: "37",
+    name: "Tapan Meat Shop",
+    type: "shop",
+    items: [
+      { id: "tm1", name: "Goat Meat (1kg)", price: 650, desc: "তাজা খাসির মাংস, প্রোটিনসমৃদ্ধ।" },
+      { id: "tm2", name: "Chicken Meat (1kg)", price: 220, desc: "তাজা দেশি মুরগির মাংস।" },
+      { id: "tm3", name: "Mutton Liver (500g)", price: 300, desc: "পুষ্টিকর খাসির কলিজা।" },
+    ],
+  },
+  {
+    id: "38",
+    name: "Ratan Book House",
+    type: "shop",
+    items: [
+      { id: "rbh1", name: "Bangla Textbook", price: 120, desc: "বিদ্যালয়ের বাংলা পাঠ্যবই।" },
+      { id: "rbh2", name: "English Grammar", price: 180, desc: "শিক্ষার্থীদের জন্য ব্যাকরণ বই।" },
+      { id: "rbh3", name: "Story Book", price: 150, desc: "শিশুদের গল্পের বই।" },
+    ],
+  },
+  {
+    id: "39",
+    name: "Nitai Vegetable Seeds",
+    type: "shop",
+    items: [
+      { id: "nv1", name: "Tomato Seeds", price: 30, desc: "উচ্চ ফলনশীল টমেটোর বীজ।" },
+      { id: "nv2", name: "Chilli Seeds", price: 25, desc: "ঝাল মরিচ চাষের জন্য বীজ।" },
+      { id: "nv3", name: "Brinjal Seeds", price: 40, desc: "গাছের ভালো ফলন দেয় এমন বেগুন বীজ।" },
+    ],
+  },
+  {
+    id: "40",
+    name: "Gita Handicrafts",
+    type: "shop",
+    items: [
+      { id: "gh1", name: "Jute Bag", price: 200, desc: "গ্রামীণ হাতের কাজের জুট ব্যাগ।" },
+      { id: "gh2", name: "Bamboo Basket", price: 180, desc: "বাঁশের তৈরি ঝুড়ি।" },
+      { id: "gh3", name: "Hand Fan", price: 60, desc: "গ্রামের ঐতিহ্যবাহী পাখা।" },
+    ],
+  },
+  {
+    id: "41",
+    name: "Sanjay Medical",
+    type: "shop",
+    items: [
+      { id: "sm1", name: "Paracetamol (10 tabs)", price: 25, desc: "জ্বর ও ব্যথা কমানোর ওষুধ।" },
+      { id: "sm2", name: "ORS Pack", price: 15, desc: "শরীরে জলীয় ভারসাম্য বজায় রাখে।" },
+      { id: "sm3", name: "Vicks Balm", price: 40, desc: "ঠান্ডা ও মাথাব্যথায় উপকারী।" },
+    ],
+  },
+  {
+    id: "42",
+    name: "Madan Tea Garden",
+    type: "shop",
+    items: [
+      { id: "mt1", name: "Leaf Tea (250g)", price: 100, desc: "পাহাড়ি চায়ের পাতা, দারুণ সুগন্ধি।" },
+      { id: "mt2", name: "Dust Tea (500g)", price: 160, desc: "গাঢ় কালো চায়ের পাউডার।" },
+      {
     ],
   },
 ];

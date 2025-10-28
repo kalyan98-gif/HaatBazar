@@ -52,7 +52,7 @@ const shops = [
   },
   { 
     id: "3", 
-    name: "Babu Restaurant", 
+    name: "Babuji Restaurant", 
     type: "shop", 
     items: [
       { id: "f1", name: "Chicken Biryani", price: 180, desc: "মশলাদার চিকেন বিরিয়ানি।" },
@@ -94,7 +94,7 @@ const shops = [
   },
   { 
     id: "4", 
-    name: "Kamal Fish Stall", 
+    name: "I&B Fish Center", 
     type: "shop", 
     items: [
       { id: "kf1", name: "Rohu Fish (1kg)", price: 280, desc: "তাজা নদীর রুই মাছ।" },
@@ -136,7 +136,7 @@ const shops = [
   },
   { 
     id: "5", 
-    name: "Rina Tailors", 
+    name: "Susuma Tailors", 
     type: "shop", 
     items: [
       { id: "rt1", name: "Blouse Stitching", price: 200, desc: "মেয়েদের ব্লাউজ সেলাই সার্ভিস।" },
@@ -220,7 +220,7 @@ const shops = [
   },
   { 
     id: "8", 
-    name: "Kali Mandir Flowers", 
+    name: "Puja Flowers", 
     type: "shop", 
     items: [
       { id: "km1", name: "Lotus Flower", price: 20, desc: "পুজোর জন্য সতেজ পদ্মফুল।" },
@@ -262,7 +262,7 @@ const shops = [
   },
   { 
     id: "9", 
-    name: "Raju Tea Stall", 
+    name: "Toton Tea Stall", 
     type: "shop", 
     items: [
       { id: "rt1", name: "Milk Tea", price: 10, desc: "তাজা দুধ ও চা পাতা দিয়ে তৈরি।" },

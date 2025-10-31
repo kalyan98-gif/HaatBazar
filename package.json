@@ -9,17 +9,12 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "keywords": [
-    "haatbazar",
-    "backend",
-    "nodejs",
-    "express"
-  ],
-  "author": "MAX",
-  "license": "MIT"
+  }
 }
